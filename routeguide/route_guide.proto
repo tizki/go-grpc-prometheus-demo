@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+option go_package = "go_prometheus_demo_helm/routeguide";
+service RouteGuide {
+
+	rpc SayHello (HelloRequest) returns (HelloReply) {}
+
+	rpc EchoService (Message) returns (Message) {}
+}
+
+
+message HelloRequest {
+string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+string message = 1;
+}
+
+message Message {
+	string message = 1;
+}
